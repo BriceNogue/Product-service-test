@@ -25,7 +25,8 @@ COPY pom.xml .
 COPY src ./src
 
 #RUN mvn package -DskipTests #A utiliser lorsqu'on a une classe principale main
-RUN mvn test #A ne utiliser lorsqu'on a une classe principale main
+#A ne utiliser lorsqu'on a une classe principale main
+RUN mvn test
 
 #FROM adoptopenjdk/openjdk17:jre-17.0.0_35_ubuntu
 #FROM eclipse-temurin:17-jdk-jammy #A utiliser lorsqu'on a une classe principale main
