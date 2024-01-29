@@ -40,3 +40,14 @@ RUN mvn test
 #COPY --from=build /app/target/*.jar app.jar #A utiliser lorsqu'on a une classe principale main
 
 #CMD ["java", "-jar", "app.jar"] #A utiliser lorsqu'on a une classe principale main
+
+FROM maven:3.8.4-openjdk-17-slim AS production
+
+WORKDIR /app
+
+COPY pom.xml .
+COPY src ./src
+
+COPY src/test/java ./src/test/java
+
+RUN mvn test
