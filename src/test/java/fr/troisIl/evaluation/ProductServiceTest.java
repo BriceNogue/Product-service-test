@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
 
 public class ProductServiceTest {
 
@@ -97,10 +96,10 @@ public class ProductServiceTest {
         productService.insert(null);
     }
 
-    //@Test
-    //public void testInsert_NullProduct() {
-    //    productService.insert(null);
-    //}
+    @Test(expected = RuntimeException.class)
+    public void testInsert_NullProduct() {
+        productService.insert(null);
+    }
 
     @Test(expected = RuntimeException.class)
     public void testInsert_NullLabel_ThrowsException() {
@@ -108,18 +107,18 @@ public class ProductServiceTest {
         productService.insert(product);
     }
 
-    /*@Test
+    @Test(expected = RuntimeException.class)
     public void testInsert_NullLabel() {
         product.setLabel(null);
         productService.insert(product);
     }
 
-    @Test
-    public void testInsert_NullQuantity() {
+    @Test//(expected = RuntimeException.class)
+    public void testInsert_NullDefaultQuantity() {
         product.setQuantity(null);
         productService.insert(product);
         assertEquals(0, product.getQuantity().intValue());
-    }*/
+    }
 
     // Insertion avec verification dans la base de donnees
     @Test

@@ -1,3 +1,4 @@
+#****************** Configuration de base pour spring boot *********************************#
 # syntax=docker/dockerfile:1
 
 #FROM eclipse-temurin:17-jdk-jammy
@@ -15,20 +16,22 @@
 
 
 
-FROM maven:3.8.4-openjdk-17-slim AS build
+#FROM maven:3.8.4-openjdk-17-slim AS build #A utiliser lorsqu'on a une classe principale main
+FROM maven:3.8.4-openjdk-17-slim
 
 WORKDIR /app
 
 COPY pom.xml .
 COPY src ./src
 
-RUN mvn package -DskipTests
+#RUN mvn package -DskipTests #A utiliser lorsqu'on a une classe principale main
+RUN mvn test #A ne utiliser lorsqu'on a une classe principale main
 
 #FROM adoptopenjdk/openjdk17:jre-17.0.0_35_ubuntu
-FROM eclipse-temurin:17-jdk-jammy
+#FROM eclipse-temurin:17-jdk-jammy #A utiliser lorsqu'on a une classe principale main
 
-WORKDIR /app
+#WORKDIR /app #A utiliser lorsqu'on a une classe principale main
 
-COPY --from=build /app/target/*.jar app.jar
+#COPY --from=build /app/target/*.jar app.jar #A utiliser lorsqu'on a une classe principale main
 
-CMD ["java", "-jar", "app.jar"]
+#CMD ["java", "-jar", "app.jar"] #A utiliser lorsqu'on a une classe principale main

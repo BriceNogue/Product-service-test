@@ -37,4 +37,8 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
+    <build>
+        <defaultGoal>install</defaultGoal>
+    </build>
+
 </project>
