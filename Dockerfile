@@ -24,8 +24,10 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
+COPY src/test/java ./src/test/java
+
 #A utiliser lorsqu'on a une classe principale main
-RUN mvn package #-DskipTests
+#RUN mvn package -DskipTests
 #A ne utiliser lorsqu'on a une classe principale main
 RUN mvn test
 
