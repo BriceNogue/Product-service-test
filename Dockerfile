@@ -16,10 +16,9 @@
 
 
 # Étape de test
-FROM base_image AS test
 # Instructions pour la construction et l'exécution des tests
 #FROM maven:3.8.4-openjdk-17-slim AS build #A utiliser lorsqu'on a une classe principale main
-FROM maven:3.8.4-openjdk-17-slim
+FROM maven:3.8.4-openjdk-17-slim AS test
 
 WORKDIR /app
 
