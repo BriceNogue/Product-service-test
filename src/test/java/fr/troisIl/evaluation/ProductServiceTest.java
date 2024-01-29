@@ -15,7 +15,7 @@ public class ProductServiceTest {
 
     private Database db = null;
     private ProductService productService;
-
+    private ProductDao productDao;
     private int countBefore = 0;
 
     private Product product;
@@ -54,7 +54,8 @@ public class ProductServiceTest {
         updateProduct.setLabel("Samsung S23");
         updateProduct.setQuantity(20);
 
-        when(productService.findById(1)).thenReturn(existProduct);
+        //when(productService.findById(1)).thenReturn(existProduct);
+
     }
 
     /**
@@ -69,6 +70,22 @@ public class ProductServiceTest {
     }
 
     /******************** TEST D'INSERTION ************************/
+
+    @Test
+    public void tstInsert_ValidProduct() {
+        // Créer un produit
+        Product product = new Product();
+        product.setLabel("Iphone 15");
+        product.setQuantity(10);
+
+        // Insérer le produit en base de données
+        Product insertedProduct = productService.insert(product);
+
+        // Vérifier que le produit a été inséré avec succès
+        Assert.assertNotNull(insertedProduct.getId());
+        Assert.assertEquals("Iphone 15", insertedProduct.getLabel());
+        Assert.assertEquals(10, insertedProduct.getQuantity().intValue());
+    }
 
     @Test
     public void testInsert() throws SQLException {
