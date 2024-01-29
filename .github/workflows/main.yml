@@ -6,7 +6,6 @@ on:
       - main
 
 jobs:
-  needs: [first_job] # Dépendance sur le job du premier workflow
   build:
     runs-on: ubuntu-latest
     steps:
