@@ -7,7 +7,7 @@ import java.sql.SQLException;
 /**
  * Objet permettant de gérer les requetes envoyées à la BDD concernant les produits
  */
-public class ProductDao {
+public class productdao {
 
     /**
      * L'objet de connexion a la bdd
