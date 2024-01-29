@@ -24,7 +24,8 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
-#RUN mvn package -DskipTests #A utiliser lorsqu'on a une classe principale main
+#A utiliser lorsqu'on a une classe principale main
+RUN mvn package #-DskipTests
 #A ne utiliser lorsqu'on a une classe principale main
 RUN mvn test
 
