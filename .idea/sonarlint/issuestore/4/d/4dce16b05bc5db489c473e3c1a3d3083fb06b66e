@@ -1,12 +1,29 @@
 
-[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(®®‰ñ
-[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Áé…Ô
-[	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(®®‰ñ
-[	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(Áé…Ô
-`	java:S1126"FDefine and throw a dedicated exception instead of using a generic one.(üƒñüÿÿÿÿ
-`	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(¦É—»üÿÿÿÿ
-[	java:S112J"FDefine and throw a dedicated exception instead of using a generic one.(ÄµÿÉ
-`	java:S112N"FDefine and throw a dedicated exception instead of using a generic one.( ŞÙÎüÿÿÿÿ
-`	java:S112Y"FDefine and throw a dedicated exception instead of using a generic one.(ÂÃœÈûÿÿÿÿ
-`	java:S112]"FDefine and throw a dedicated exception instead of using a generic one.( ŞÙÎüÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰ïÜÀøÿÿÿÿ
+
+AY1MgM5ZXFgifwhe5rDK	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(®®‰ñ8à°ïºÌ0J$6198c54f-cba2-44fc-8c85-8e3fe215da2e
+
+AY1MgM5ZXFgifwhe5rDL	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Áé…Ô8à°ïºÌ0J$6d58c7b3-a820-4604-8bd2-7b67df2dc257
+
+AY1MgM5ZXFgifwhe5rDM	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(®®‰ñ8à°ïºÌ0J$e09f4e60-902c-4ae2-958d-2876d29e57b9
+
+AY1MgM5ZXFgifwhe5rDN	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(Áé…Ô8à°ïºÌ0J$b9d91ec8-0732-4c40-8c61-f904cad17f87
+£
+AY1MgM5ZXFgifwhe5rDO	java:S1126"FDefine and throw a dedicated exception instead of using a generic one.(üƒñüÿÿÿÿ8à°ïºÌ0J$e038ba4d-c5d0-48ab-b837-ac8f3a1e690a
+£
+AY1MgM5ZXFgifwhe5rDP	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(¦É—»üÿÿÿÿ8à°ïºÌ0J$e2a62b61-c548-4559-b626-7ce91b433ea2
+
+AY1MgM5ZXFgifwhe5rDQ	java:S112J"FDefine and throw a dedicated exception instead of using a generic one.(ÄµÿÉ8à°ïºÌ0J$84ad1b7a-e276-469d-b9dd-7ba82cdc265a
+£
+AY1MgM5ZXFgifwhe5rDR	java:S112N"FDefine and throw a dedicated exception instead of using a generic one.( ŞÙÎüÿÿÿÿ8à°ïºÌ0J$b4a8542d-7114-4d78-aacc-105f196f97bf
+£
+AY1MgM5ZXFgifwhe5rDS	java:S112Y"FDefine and throw a dedicated exception instead of using a generic one.(ÂÃœÈûÿÿÿÿ8à°ïºÌ0J$2b2a22c0-a49f-4a87-965d-f0cf7336d7d2
+£
+AY1MgM5ZXFgifwhe5rDT	java:S112]"FDefine and throw a dedicated exception instead of using a generic one.( ŞÙÎüÿÿÿÿ8à°ïºÌ0J$668de7b7-fbe4-4b94-88c1-a5721414efc8
+	java:S112d"FDefine and throw a dedicated exception instead of using a generic one.(ÂÃœÈûÿÿÿÿ8Õ¸½ÕÕ1J$fef6ebc9-d0af-43f0-adfa-7748d6f4386c
+	java:S112h"FDefine and throw a dedicated exception instead of using a generic one.( ŞÙÎüÿÿÿÿ8Õ¸½ÕÕ1J$d7b04900-84bf-4f9a-8dc7-802e135e9649
+°
+java:S1192N"hDefine a constant instead of duplicating this literal "Le produit n'a pas Ã©tÃ© trouvÃ© en BDD" 3 times.( ŞÙÎüÿÿÿÿ8Ø¸½ÕÕ1J$df897a4f-0de5-455b-bc87-1f58fb92ceb8
+·
+AY1MgM5ZXFgifwhe5rDU	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰ïÜÀøÿÿÿÿ8à°ïºÌ0J$6f5c9cc3-e066-4dd5-ba28-35b104543f89
+™
+java:S4144b"VUpdate this method so that its implementation is not identical to "delete" on line 87.(Ü…²á8ÀÔ½ÕÕ1J$b241fb7d-63fb-4ad1-a45e-2659be6df182

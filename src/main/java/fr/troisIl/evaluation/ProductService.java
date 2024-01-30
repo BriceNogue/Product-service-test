@@ -95,4 +95,15 @@ public class ProductService {
         productDao.delete(id);
     }
 
+    public void deletee(Integer id) {
+        if(id == null) {
+            throw new RuntimeException("L'id du produit à supprimer est requis");
+        }
+        Product product = productDao.findById(id);
+        if(product == null) {
+            throw new RuntimeException("Le produit n'a pas été trouvé en BDD");
+        }
+        productDao.delete(id);
+    }
+
 }
