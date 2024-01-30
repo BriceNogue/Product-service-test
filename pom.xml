@@ -44,6 +44,8 @@
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.junit.reportPaths>target/surefire-reports</sonar.junit.reportPaths>
         <sonar.jacoco.reportPaths>target/jacoco.exec</sonar.jacoco.reportPaths>
+
+        <sonar.qualitygate.wait>true</sonar.qualitygate.wait>
     </properties>
 
     <build>
