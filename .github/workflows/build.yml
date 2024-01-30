@@ -39,20 +39,3 @@ jobs:
       - name: Retrieve SonarCloud Quality Gate status
         id: quality-gate
         run: echo "::set-output name=quality_gate_status::passed"
-
-      - name: Create SonarCloud notification
-        uses: actions/github-script@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const qualityGateStatus = '${{ steps.quality-gate.outputs.quality_gate_status }}';
-            const pullRequestNumber = process.env.GITHUB_REF.split('/')[2];
-
-            if (pullRequestNumber) {
-              const issueComment = `SonarCloud Quality Gate status: ${qualityGateStatus}`;
-              github.issues.createComment({
-                ...context.repo,
-                issue_number: pullRequestNumber,
-                body: issueComment
-              });
-            }
