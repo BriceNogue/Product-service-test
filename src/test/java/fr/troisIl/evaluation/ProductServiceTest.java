@@ -159,4 +159,8 @@ public class ProductServiceTest {
     public void testDelete() throws SQLException {
     }
 
+    @Test
+    public void testDeletee() throws SQLException {
+    }
+
 }
