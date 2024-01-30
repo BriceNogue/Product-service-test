@@ -41,7 +41,7 @@ jobs:
         run: echo "::set-output name=quality_gate_status::passed"
 
       - name: Create SonarCloud notification
-        uses: actions/github-script@v5
+        uses: actions/github-script@v4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -49,11 +49,10 @@ jobs:
             const pullRequestNumber = process.env.GITHUB_REF.split('/')[2];
 
             if (pullRequestNumber) {
+              const { context, github } = require('@actions/github');
               const issueComment = `SonarCloud Quality Gate status: ${qualityGateStatus}`;
-              const octokit = context.getOctokit();
-              await octokit.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
+              await github.issues.createComment({
+                ...context.repo,
                 issue_number: pullRequestNumber,
                 body: issueComment
               });
