@@ -35,3 +35,25 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=BriceNogue_Product-service-test
+
+      - name: Retrieve SonarCloud Quality Gate status
+        id: quality-gate
+        run: |
+          echo "::set-output name=quality_gate_status::$(curl -s -u ${{ secrets.SONAR_TOKEN }}: 'https://sonarcloud.io/api/qualitygates/project_status?projectKey=BriceNogue_Product-service-test' | jq -r '.projectStatus.status')"
+
+      - name: Create SonarCloud notification
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const qualityGateStatus = '${{ steps.quality-gate.outputs.quality_gate_status }}';
+            const pullRequestNumber = process.env.GITHUB_REF.split('/')[2];
+            
+            if (pullRequestNumber) {
+              const issueComment = `SonarCloud Quality Gate status: ${qualityGateStatus}`;
+              github.issues.createComment({
+                ...context.repo,
+                issue_number: pullRequestNumber,
+                body: issueComment
+              });
+            }
