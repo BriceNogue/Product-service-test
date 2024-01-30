@@ -1,0 +1,2 @@
+
+fdocker:S6471,"NThe maven image runs with root as the default user. Make sure it is safe here.(¾ÉÌ
